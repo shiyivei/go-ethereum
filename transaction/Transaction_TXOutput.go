@@ -2,7 +2,7 @@ package transaction
 
 import (
 	"bytes"
-	"pc-network/go-publicChain/utils"
+	"go-publicChain/utils"
 )
 
 type TXOutput struct {

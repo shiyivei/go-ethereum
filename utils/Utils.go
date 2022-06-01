@@ -6,8 +6,8 @@ import (
 	"encoding/gob"
 	"encoding/json"
 	"fmt"
+	"go-publicChain/block"
 	"log"
-	"pc-network/go-publicChain/block"
 )
 
 func IntToHex(num int64) []byte {

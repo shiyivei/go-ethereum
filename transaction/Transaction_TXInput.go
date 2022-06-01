@@ -2,7 +2,7 @@ package transaction
 
 import (
 	"bytes"
-	"pc-network/go-publicChain/wallet"
+	"go-publicChain/wallet"
 )
 
 type TXInput struct {

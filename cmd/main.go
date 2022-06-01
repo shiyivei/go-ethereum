@@ -1,8 +1,10 @@
 package main
 
-import "pc-network/Part84-Net-validation/src"
+import (
+	"go-publicChain/cli"
+)
 
 func main() {
-	cli := src.CLI{}
+	cli := cli.CLI{}
 	cli.Run()
 }

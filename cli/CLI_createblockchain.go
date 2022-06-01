@@ -1,8 +1,8 @@
 package cli
 
 import (
-	"pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/transaction"
+	"go-publicChain/block"
+	"go-publicChain/transaction"
 )
 
 func (cli *CLI) creatGenesisBlockChain(address string, nodeID string) {

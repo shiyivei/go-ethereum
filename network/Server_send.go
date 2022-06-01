@@ -3,14 +3,14 @@ package network
 import (
 	"bytes"
 	"fmt"
+	"go-publicChain/block"
+	"go-publicChain/utils"
 	"io"
 	"log"
 	"net"
-	block2 "pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/utils"
 )
 
-func SendVersion(toAddress string, bc *block2.Blockchain) {
+func SendVersion(toAddress string, bc *block.Blockchain) {
 
 	bestHeight := bc.GetBestHeight()
 	payload := utils.GobEncode(Version{utils.NODE_VERSION, bestHeight, nodeAddress})
@@ -41,7 +41,7 @@ func SendGetBlocks(addrFrom string) {
 	SendData(addrFrom, context)
 }
 
-func SendBlock(addrFrom string, block *block2.Block) {
+func SendBlock(addrFrom string, block *block.Block) {
 	payload := utils.GobEncode(BlockData{nodeAddress, block})
 	context := append(utils.CommandToBytes(utils.BLOCK), payload...) //combine
 	SendData(addrFrom, context)

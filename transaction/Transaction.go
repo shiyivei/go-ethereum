@@ -8,11 +8,12 @@ import (
 	"crypto/sha256"
 	"encoding/gob"
 	"encoding/hex"
+	"go-publicChain/block"
+	"go-publicChain/utils"
+	"go-publicChain/wallet"
 	"log"
 	"math/big"
-	"pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/utils"
-	wallet2 "pc-network/go-publicChain/wallet"
+
 	"time"
 )
 
@@ -72,7 +73,7 @@ func (tx *Transaction) HashTransaction() {
 func NewSimpleTransaction(from, to string, amount int, blockchain *block.Blockchain, txs []*Transaction, nodeID string) *Transaction {
 
 	//get wallets and get publicKey
-	wallets, _ := wallet2.NewWallets(nodeID)
+	wallets, _ := wallet.NewWallets(nodeID)
 	wallet := wallets.WalletMap[from]
 
 	money, spendableUTXODic := blockchain.FindSpendableUTXOS(from, amount, txs)

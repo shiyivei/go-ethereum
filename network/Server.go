@@ -2,11 +2,11 @@ package network
 
 import (
 	"fmt"
+	"go-publicChain/block"
+	"go-publicChain/utils"
 	"io/ioutil"
 	"log"
 	"net"
-	"pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/utils"
 )
 
 func StartServer(nodeID string, mineAddress string) {
@@ -54,20 +54,20 @@ func HandleConnection(conn net.Conn, bc *block.Blockchain) {
 
 	switch command {
 	case utils.VERSION:
-		utils.handleVersion(request, bc)
+		handleVersion(request, bc)
 		fmt.Printf("received a message:%s\n", request[:utils.COMMANDLENGTH])
 	case utils.ADDR:
-		utils.handleAddr(request, bc)
+		handleAddr(request, bc)
 	case utils.BLOCK:
-		utils.handleBlock(request, bc)
+		handleBlock(request, bc)
 	case utils.GETBLOCKS:
-		utils.handleGetBlocks(request, bc)
+		handleGetBlocks(request, bc)
 	case utils.INV:
-		utils.handleInv(request, bc)
+		handleInv(request, bc)
 	case utils.TX:
-		utils.handleTx(request, bc)
+		handleTx(request, bc)
 	case utils.GETDATA:
-		utils.handleGetData(request, bc)
+		handleGetData(request, bc)
 	default:
 		fmt.Printf("bad request %v\n", command)
 	}

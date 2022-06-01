@@ -1,7 +1,7 @@
 package cli
 
 import (
-	"pc-network/go-publicChain/block"
+	"go-publicChain/block"
 )
 
 func (cli CLI) printChain(nodeID string) {

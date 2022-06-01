@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"fmt"
+	"go-publicChain/block"
+	"go-publicChain/utils"
 	"math/big"
-	"pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/utils"
 )
 
 //it means at least 16 0 in front of the hash

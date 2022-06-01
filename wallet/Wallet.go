@@ -7,10 +7,10 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 	"fmt"
+	"go-publicChain/utils"
 	"golang.org/x/crypto/ripemd160"
 	"log"
 	"os"
-	"pc-network/go-publicChain/utils"
 )
 
 const version = byte(0x00)

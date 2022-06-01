@@ -3,10 +3,10 @@ package cli
 import (
 	"flag"
 	"fmt"
+	"go-publicChain/utils"
+	"go-publicChain/wallet"
 	"log"
 	"os"
-	"pc-network/go-publicChain/utils"
-	"pc-network/go-publicChain/wallet"
 )
 
 type CLI struct{}

@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/gob"
 	"fmt"
+	"go-publicChain/block"
+	"go-publicChain/transaction"
+	"go-publicChain/utils"
 	"log"
-	"pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/transaction"
-	"pc-network/go-publicChain/utils"
 )
 
 func handleVersion(request []byte, bc *block.Blockchain) {

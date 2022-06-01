@@ -2,8 +2,8 @@ package cli
 
 import (
 	"fmt"
-	"pc-network/go-publicChain/block"
-	"pc-network/go-publicChain/transaction"
+	"go-publicChain/block"
+	"go-publicChain/transaction"
 )
 
 func (cli CLI) send(from []string, to []string, amount []string, nodeID string, mineNow bool) {

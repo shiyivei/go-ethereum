@@ -1,7 +1,7 @@
 package network
 
 import (
-	"pc-network/go-publicChain/block"
+	"go-publicChain/block"
 )
 
 type Version struct {
